@@ -52,6 +52,10 @@ cp ./env.example ./.env
 6.1. **Configure Mobile App Environment Variables**: Now, open the `.env` file with a text editor and replace the placeholder for `EXPO_PUBLIC_API_GATEWAY_URL` with the value extracted from the `base_url` Terraform output.
 
 7. **Start the Mobile App**:
+- **Install Dependencies**: Install the dependencies:
+  ```
+  cd lambda && yarn install && yarn build && cd ..
+  ```
 - **iOS**: Run the following command to start the React Native mobile app on an iOS simulator or device:
   ```
   yarn ios
