@@ -28,7 +28,7 @@ cd aws-serverless-mobile
 cd lambda && yarn install && yarn build && cd ..
 ```
 
-4. **Configure AWS Credentials**: Duplicate the file `./terraform/.aws/creds.example` and rename it to `.creds`.
+4. **Configure AWS Credentials**: Duplicate the file `./terraform/.aws/creds.example` and rename it to `./terraform/.aws/creds`.
 ```
 cp ./terraform/.aws/creds.example ./terraform/.aws/.creds
 ```
@@ -37,13 +37,13 @@ cp ./terraform/.aws/creds.example ./terraform/.aws/.creds
 
 5. **Create Infrastructure with Terraform**: Use Terraform to easily create the required AWS infrastructure.
 ```
-cd ./terraform && terraform init
+cd terraform && terraform init
 terraform apply
 cd ..
 ```
 Terraform will print a `base_url` value as the results of the terraform apply.
 
-6. **Configure Mobile App Environment Variables**: Duplicate the file `./mobile/env.example` and rename it to `.env`. 
+6. **Configure Mobile App Environment Variables**: Duplicate the file `./mobile/env.example` and rename it to `./mobile/.env`. 
 ```
 cd mobile
 cp ./env.example ./.env
@@ -54,7 +54,7 @@ cp ./env.example ./.env
 7. **Start the Mobile App**:
 - **Install Dependencies**: Install the dependencies:
   ```
-  cd lambda && yarn install && yarn build && cd ..
+  yarn install
   ```
 - **iOS**: Run the following command to start the React Native mobile app on an iOS simulator or device:
   ```
