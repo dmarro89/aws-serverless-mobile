@@ -17,7 +17,6 @@ class BookRouteMapper implements RouteMapper {
   }
 
   public async mapRoute(): Promise<APIGatewayProxyResult> {
-    // Gestisci la richiesta in base all'endpoint e al metodo HTTP
     if (this.endpoint.includes("/books")) {
       const regex = /\/books\/(\d+)$/;
       const matches = this.endpoint.match(regex);
